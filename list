@@ -20,5 +20,6 @@
 /dom/base/nsScriptLoader.cpp
 /dom/base/nsScriptLoader.h
 /dom/base/nsGlobalWindow.cpp
+/dom/bindings/CallbackObject.h
 /mozglue/misc/TimeStamp.h
 /layout/base/nsRefreshDriver.cpp
