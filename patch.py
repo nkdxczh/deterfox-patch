@@ -3,8 +3,8 @@ import shutil
 
 f = open("list")
 
-src = raw_input("src path: ")
-dst = raw_input("dst path: ")
+src = "patch"
+dst = "../gecko-dev"
 for line in f:
     pos = line.rfind("/")
     end = -1
