@@ -50,6 +50,7 @@ public:
 
   //_MODIFY
   uint64_t expTime;
+  void* key;
   //_MODIFY
 
   // The caller may pass a global object which will act as an override for the

@@ -1609,8 +1609,8 @@ nsRefreshDriver::RunFrameRequestCallbacks(TimeStamp aNowTime)
       for (auto& callback : docCallbacks.mCallbacks) {
         //_MODIFY
         //callback->Call(timeStamp);
-        set_synchronize(false);
-        set_counter(callback->expTime);
+        set_synchronize(false, callback->key);
+        set_counter(callback->expTime, callback->key);
         timeStamp = callback->expTime;
         callback->Call(callback->expTime);
         //_MODIFY
