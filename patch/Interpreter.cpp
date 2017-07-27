@@ -94,12 +94,15 @@ void inc_counter(uint64_t args, void* key) {
     }
     uint64_t c = (uint64_t)args;
     std::map<void*, volatile uint64_t>::iterator it;
-    it = mapCounter.find(inc_key);
+    for(it = mapCounter.begin(); it != mapCounter.end(); it++){
+      mapCounter[it->first] += c;
+    }
+    /*it = mapCounter.find(inc_key);
     if(it == mapCounter.end()){
         if(key == (void*)1)mapCounter[inc_key] = 0;
         else mapCounter[inc_key] = mapCounter[(void*)1];
     }
-    mapCounter[inc_key] += c;
+    mapCounter[inc_key] += c;*/
 
     JS_COUNTER_LOG("counter %i inc %i", counter, c);
 }
